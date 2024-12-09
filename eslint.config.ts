@@ -102,6 +102,7 @@ export default [
       "docs",
       "examples",
       "website",
+      "website-*",
       "test",
     ],
   },

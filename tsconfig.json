@@ -24,6 +24,7 @@
   ],
   "exclude": [
     "website",
+    "website-*",
     "examples",
     "node_modules",
     "packages/*/dist",

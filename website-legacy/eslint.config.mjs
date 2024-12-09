@@ -16,13 +16,14 @@ export default tseslint.config(
     },
     rules: {
       "no-undef": "off",
-      "@typescript-eslint/require-await": "off",
     },
   },
+  // ESLint React rules
   {
     files: ["**/*.{ts,tsx}"],
-    ...react.configs["recommended-type-checked"],
+    ...react.configs.recommended,
   },
+  // React hooks rules
   {
     files: ["**/*.{ts,tsx}"],
     plugins: {
@@ -34,6 +35,7 @@ export default tseslint.config(
     files: ["*.js"],
     ...tseslint.configs.disableTypeChecked,
   },
+  // Ignore files
   gitignore(),
   {
     ignores: ["*.config.mjs"],

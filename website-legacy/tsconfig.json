@@ -1,0 +1,63 @@
+{
+  "extends": [
+    "../tsconfig.base.json",
+    "@tsconfig/node22/tsconfig.json"
+  ],
+  "compilerOptions": {
+    "lib": [
+      "DOM",
+      "DOM.Iterable",
+      "ESNext"
+    ],
+    "noEmit": true,
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "skipLibCheck": true,
+    "moduleDetection": "force",
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "allowJs": false,
+    "checkJs": false,
+    "strict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "exactOptionalPropertyTypes": true,
+    "composite": false,
+    "stripInternal": false,
+    "jsx": "preserve",
+    "paths": {
+      "#": [
+        "."
+      ],
+      "#/*": [
+        "./*"
+      ]
+    },
+    "resolveJsonModule": true,
+    "incremental": true
+  },
+  "include": [
+    "*.d.ts",
+    "*.config.js",
+    "*.config.mjs",
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ],
+  "mdx": {
+    "plugins": [
+      [
+        "remark-frontmatter",
+        [
+          "toml",
+          "yaml"
+        ]
+      ],
+      "remark-gfm"
+    ]
+  }
+}
